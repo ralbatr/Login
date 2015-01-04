@@ -1,0 +1,29 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+    #import "AppUtil.h"
+    #import "SSKeychain.h"
+    #import "OLGhostAlertView.h"
+#endif
+
+#define kfont [UIFont systemFontOfSize:14]
+#define mIsiOS7 [[[UIDevice currentDevice] systemVersion] floatValue] == 7.0
+#define kService @"service"
+#define kdateKey @"datekey"
+#define mUserDefaults       [NSUserDefaults standardUserDefaults]
+//iPhone的宽度
+#define iPwidth [[UIScreen mainScreen] bounds].size.width
+#define kbgColor [UIColor colorWithRed:236/255.0 green:236/255.0 blue:236/255.0 alpha:1]
